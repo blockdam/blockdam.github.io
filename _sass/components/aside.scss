@@ -1,0 +1,91 @@
+#dao aside {
+
+  padding-top: 12rem;
+  justify-content: flex-start;
+
+  > div  {
+    margin: 1rem 3rem;
+    display: none;
+    flex-direction: column;
+
+    h3  {
+      position: relative;
+      @include uppercase();
+      font-size: 1rem;
+      line-height: 1.8;
+      background: $dark-grey;
+      color: #fff;
+      padding: 0 1rem;
+      margin-bottom: .5rem;
+      width: calc(100% - 2rem);
+      text-align: center;
+
+      > span {
+        position: absolute;
+        left: 1rem;
+        top: 0;
+      }
+    }
+    > div {
+
+      @include uppercase();
+      font-size: .725rem;
+    }
+
+    form {
+
+      position: relative;
+
+      > div {
+        display: flex;
+        flex-direction: column;
+        margin: .25rem 0;
+
+          label {
+            @include uppercase();
+            font-size: .725rem;
+          }
+
+          input {
+
+            height: 1.5rem;
+            line-height: 1.5rem;
+          }
+
+      }
+
+      button {
+        width: 100%;
+        margin: 1rem 0;
+      }
+    }
+  }
+
+  #minter {
+
+    > div {
+
+      &:last-of-type {
+
+        padding-bottom: .5rem;
+        border-bottom: 1px solid $grey;
+        margin-bottom: .5rem;
+      }
+    }
+  }
+
+  #voter {
+
+    align-items: center;
+
+    .amount {
+      font-size: 8rem;
+      line-height: 1;
+    }
+
+    label {
+      font-size: 2rem;
+    }
+
+  }
+}

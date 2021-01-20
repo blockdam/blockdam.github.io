@@ -1,0 +1,120 @@
+#dao-bcd-token {
+
+  margin-bottom: 1rem;
+  background: $grey;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 1rem .5rem 1rem;
+  justify-content: space-between;
+
+  width : calc(100% - 2rem);
+
+
+  @media(min-width: $breakpoint-md) {
+
+  }
+
+
+  h2 {
+    @include condensed-title();
+  }
+
+  > span {
+    @include small-sans();
+    margin: 0 0 1.5rem;
+  }
+
+  .flex-row {
+
+    position: relative;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+
+
+
+    > div.flex-half {
+
+      position: relative;
+      padding:  0 0 .5rem 0;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+
+      @media(min-width: $breakpoint-md) {
+        width : calc(50% - 0rem);
+      }
+
+      .chart {
+        height: 130px;
+        width: 100%;
+        margin-bottom: 1rem;
+
+        .total-axis {
+
+          path.domain {
+            stroke: black;
+          }
+
+          text {
+            fill: black;
+          }
+
+          line, path {
+            stroke : black;
+          }
+
+          .tick:first-of-type {
+            display: none;
+          }
+        }
+
+        .time-axis {
+
+          text {
+            fill: black;
+          }
+
+          line, path {
+            stroke : black;
+          }
+
+
+        }
+
+        .line {
+          fill: none;
+          stroke: black;
+          stroke-width: 1px;
+        }
+
+        rect.bar {
+          fill : $creme;
+        }
+      }
+
+
+      ul {
+        margin:0 ;
+        padding: 0 0 0 .5rem;
+        list-style: none;
+        border-left: 1px solid black;
+
+        li {
+          @include uppercase;
+          font-size: .75rem;
+        }
+
+      }
+    }
+
+    .inline_block {
+
+      display: inline-block;
+    }
+  }
+
+
+}

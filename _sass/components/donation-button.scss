@@ -1,0 +1,74 @@
+#donation_button_container {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 12rem;
+  width: 240px;
+  text-align: center;
+
+  span {
+    @include small-sans();
+    padding: 0 1.5rem;
+  }
+
+  svg {
+    margin: .5rem 0 0 0;
+    width: 2.25rem;
+    height: auto;
+    fill: #333;
+    cursor: pointer;
+
+    &:hover {
+      fill: black;
+    }
+  }
+
+  .tooltip {
+
+    padding: 0 1rem;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 500ms linear;
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+
+      > div {
+        display: flex;
+        flex-direction: row;
+        @include uppercase();
+        letter-spacing: 0;
+        font-size: .725rem;
+        line-height: 2.5;
+        margin: 0 0 0.5rem 0rem;
+
+        input {
+
+          height: 1.5rem;
+          line-height: 1.5;
+          width: 2rem;
+          margin-right: .25rem;
+
+          text-align: right;
+          border: none;
+        }
+      }
+
+      button {
+        height: 1.5rem;
+        width: 4rem;
+      }
+    }
+
+    &.visible {
+
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}

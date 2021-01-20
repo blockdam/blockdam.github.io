@@ -1,0 +1,80 @@
+#social-buttons-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+  margin-top: 4rem;
+  @media(min-width: $breakpoint-sm) {
+    //align-items: flex-end;
+    //margin-bottom: 2rem;
+    //margin-top: -6rem;
+    //width: 640px;
+
+  }
+  @media(min-width: 1200px) {
+    //margin-bottom: -4rem;
+    //margin-top: 0;
+    //width: calc(100% - 1rem);
+
+  }
+  @media (max-width: $breakpoint-lg) and (min-width: $breakpoint-md) {
+
+  }
+  @media(min-width: $breakpoint-lg) {
+
+  }
+
+}
+
+#social-buttons {
+
+    display: flex;
+    justify-content: center;
+
+
+
+    ul {
+
+      display: flex;
+      flex-direction: row;
+
+      li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        border-radius: 50%;
+        background: rgb(180, 181, 180);
+        transition: all 250ms ease;
+
+        margin-left: .5rem;
+        height: 3.5rem;
+        width: 3.5rem;
+        border-radius: 50%;
+        //@media(min-width: 1200px) {
+        //  background: white;
+        //}
+      }
+
+      svg  {
+
+        height: 3rem;
+        width: 3rem;
+        fill: white;
+
+        transition: all 250ms ease;
+      }
+
+      //svg:hover {
+      //
+      //  fill: black;
+      //  @media(min-width: 1200px) {
+      //    fill: black;
+      //  }
+      //}
+
+      li:hover {
+        background: black;
+      }
+    }
+}

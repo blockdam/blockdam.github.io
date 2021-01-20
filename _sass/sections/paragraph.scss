@@ -1,0 +1,36 @@
+.section.paragraph {
+
+  p {
+    margin-bottom: 1.5rem;
+  }
+
+
+  h2 {
+    //@include condensed-header();
+    @include bodyTextBold();
+    text-transform: uppercase;
+    font-size: 1.25rem;
+
+  }
+
+  h3 {
+
+    //@include bodyTextBold();
+   // font-family: Gotham SSm A,Gotham SSm B;
+    @include condensed-header();
+    //padding-bottom: .125rem;
+
+  }
+
+
+  h4{}
+
+
+  ul {
+    list-style: circle;
+    margin-bottom: 3rem;
+  }
+
+  li {
+  }
+}

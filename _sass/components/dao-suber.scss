@@ -1,0 +1,23 @@
+#dao-suber {
+
+  margin-bottom: 1rem;
+  background: $grey;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 1rem 1rem .5rem 1rem;
+
+  width : calc(100% - 2rem);
+  min-height: 300px;
+
+
+  h2 {
+    @include condensed-title();
+  }
+
+  > span, a {
+    @include small-sans();
+    margin: 0 0 1.5rem;
+  }
+}

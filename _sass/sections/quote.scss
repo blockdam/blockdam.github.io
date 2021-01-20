@@ -1,0 +1,45 @@
+
+.section.quote {
+
+  padding: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  svg {
+    position: absolute;
+    width: 3rem;
+    height: auto;
+    margin: 0 1rem;
+  }
+
+  svg:first-of-type {
+    top: 3.65rem;
+    left: -8rem;
+    transform: scaleY(-1);
+  }
+
+  //svg:last-of-type {
+  //  transform: scale(-1);
+  //  bottom: 6rem;
+  //  right: -8.5rem;
+  //}
+
+  .quote__text {
+
+    font-family: "Mercury SSm A", "Mercury SSm B";
+    font-style: italic;
+    font-weight: 300;
+    font-size: 1.3rem;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  .quote__text__name {
+
+    display: block;
+    margin-top: 1.25rem;
+    @include uppercase();
+    border-bottom: 4px double black;
+  }
+}

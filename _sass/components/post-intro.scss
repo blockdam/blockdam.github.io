@@ -1,0 +1,14 @@
+.post-intro {
+
+
+  p {
+    margin-bottom: 1.77rem;
+
+  }
+
+  p:first-of-type {
+
+    @include bodyTextBold();
+    //text-align: center;
+  }
+}

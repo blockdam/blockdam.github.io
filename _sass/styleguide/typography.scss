@@ -1,0 +1,139 @@
+
+@mixin bodyText {
+
+    font-family: "Mercury SSm A", "Mercury SSm B";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 1.6;
+
+}
+
+@mixin bodyTextBold {
+
+    font-family: "Mercury SSm A", "Mercury SSm B";
+    font-style: normal;
+    font-weight: 700;
+    font-weight: 600;
+    font-size: 1.44rem;
+    line-height: 1.45;
+    color: $dark-grey;
+
+}
+
+@mixin heavy {
+
+       font-family: "Gotham SSm A", "Gotham SSm B";
+
+       font-style: normal;
+       font-weight: 800;
+       font-size: 4rem;
+       line-height: 1.05;
+
+       i {
+        font-style: italic;
+       }
+
+}
+
+
+@mixin condensed-book {
+
+       font-family: "Gotham Cond SSm A", "Gotham Cond SSm B";
+       text-transform: uppercase;
+       font-style: normal;
+       font-weight: 400;
+       font-size: 4rem;
+       line-height: 1.1;
+
+}
+
+@mixin condensed-header {
+
+        font-style: normal;
+        font-weight: 600;
+        line-height: 1.35;
+        font-size: 1.8rem;
+        font-family: Gotham Cond SSm A,Gotham Cond SSm B;
+        letter-spacing: .5px;
+        padding-bottom: .125rem;
+
+}
+
+@mixin condensed-title {
+
+  font-style: normal;
+  font-family: Gotham Cond SSm A,Gotham Cond SSm B;
+  font-weight: 400;
+  line-height: .95;
+  font-size: 2.4rem;
+  letter-spacing: .5px;
+  margin-bottom: .5rem;
+
+}
+
+
+@mixin small-sans {
+
+  font-family: "Gotham SSm A", "Gotham SSm B";
+  font-weight: 300;
+  font-size: .85rem;
+  line-height: 1.5;
+
+}
+
+
+@mixin uppercase {
+
+  font-family: "Gotham SSm A", "Gotham SSm B";
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.66;
+  text-transform: uppercase;
+  letter-spacing: 1.25px;
+}
+
+@mixin uppercase-large {
+
+  @include uppercase;
+  font-size: 1.3rem;
+  line-height: 1.4;
+  letter-spacing: 1.5px;
+
+}
+
+@mixin uppercase-small {
+
+  @include uppercase;
+  font-size: .725rem;
+  line-height: 1.5;
+  letter-spacing: 1px;
+
+}
+
+body {
+
+    @include bodyText();
+    color: $dark-grey;
+}
+
+.cursor_pointer {
+  cursor: pointer;
+}
+
+a {
+    color: black;
+    border-bottom: 1px solid #000;
+    text-decoration: none;
+    cursor: pointer;
+
+    &.no_border {
+      border: none;
+    }
+}
+
+a:hover {
+    color: black;
+    text-decoration: none;
+    //background: black;
+}

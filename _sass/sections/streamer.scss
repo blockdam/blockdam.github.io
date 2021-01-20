@@ -1,0 +1,34 @@
+
+.section.streamer {
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin: 4rem auto;
+
+  > div {
+
+    font-family: "Mercury Display A", "Mercury Display B";
+    font-size: 2rem;
+    line-height: 1.2;
+    font-weight: 400;
+    max-width: 700px;
+    padding-left: 1.5rem;
+    border-left: 6px double black;
+  }
+
+  &.right {
+
+    justify-content: flex-end;
+
+    > div {
+      text-align: right;
+      padding-left : 0;
+      padding-right: 1.5rem;
+      border-left: 0px double black;
+      border-right: 6px double black;
+
+    }
+  }
+
+}

@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>/authors/jill.html</loc>
-<lastmod>2021-01-18T18:21:45+01:00</lastmod>
+<loc>/authors/hans.html</loc>
+<lastmod>2021-01-20T14:44:42+01:00</lastmod>
 </url>
 <url>
-<loc>/authors/ted.html</loc>
-<lastmod>2021-01-18T18:21:45+01:00</lastmod>
+<loc>/authors/jill.html</loc>
+<lastmod>2021-01-20T14:44:42+01:00</lastmod>
+</url>
+<url>
+<loc>/authors/krijn.html</loc>
+<lastmod>2021-01-20T14:44:42+01:00</lastmod>
 </url>
 <url>
 <loc>/2018/08/22/kiwifruit.html</loc>
@@ -18,6 +22,10 @@
 </url>
 <url>
 <loc>/2021/01/18/apples.html</loc>
+<lastmod>2021-01-18T00:00:00+01:00</lastmod>
+</url>
+<url>
+<loc>/2021/01/18/how-to-use-rings-for-your-seed.html</loc>
 <lastmod>2021-01-18T00:00:00+01:00</lastmod>
 </url>
 <url>

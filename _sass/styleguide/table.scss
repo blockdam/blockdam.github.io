@@ -1,0 +1,13 @@
+table.default {
+
+  width: 100%;
+  margin: 1.5rem 0;
+
+  @include uppercase();
+  font-size: .75rem;
+
+  td {
+    border-bottom: 1px solid $grey;
+    padding: .25rem 0;
+  }
+}

@@ -1,0 +1,92 @@
+a.block {
+
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-decoration: none;
+  color: black;
+  border: none;
+  background: $dark-grey;
+  color: white;
+  padding: 1rem 0;
+
+  > * {
+    margin: 0 1rem;
+  }
+
+  h2 {
+    font-family: Gotham Cond SSm A ,Gotham Cond SSm B;
+    font-size: 2.4rem;
+    line-height: .925;
+    font-weight: 400;
+    margin: .275rem 1rem;
+    letter-spacing: .5px;
+  }
+
+  span.date, span.author {
+
+    @include uppercase();
+    display: block;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  span.date {
+    font-size: .725rem;
+  }
+
+  span.readmore {
+    @include uppercase();
+    display: block;
+    font-size: .875rem;
+    line-height: 1.25;
+    margin-top: .5rem;
+    border-bottom: 1px solid transparent;
+
+
+  }
+
+  &.longTitle h2 {
+    font-size: 1.85rem;
+    line-height: 1;
+  }
+
+  .content {
+    @include small-sans();
+  }
+
+  &.activity {
+
+    align-items: flex-end;
+    padding-left: 6rem;
+
+    > * {
+      text-align: right;
+    }
+
+    h2 {
+      margin: .275rem 1rem .5rem;
+    }
+
+    svg {
+
+      position: absolute;
+      fill: $creme;
+      left: -4.5rem;
+      bottom: -15px;
+      width: 120px;
+      height: auto;
+      -webkit-transform: scaleX(-1);
+      transform: scaleX(-1) rotate(15deg);
+    }
+  }
+
+  &:hover {
+    span.readmore {
+      border-bottom: 1px solid black;
+    }
+  }
+}
+

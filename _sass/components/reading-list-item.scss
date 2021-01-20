@@ -1,0 +1,133 @@
+.recommendation {
+
+  //margin-bottom: 1rem;
+  position: relative;
+  text-align: center;
+  padding: .5rem .5rem .5rem .5rem;
+  border-bottom: 1px solid $secondary;
+  width: calc(100% - 1rem);
+
+
+
+  a {
+    text-decoration: none;
+    border: none;
+    display: block;
+
+    &.hidden {
+      display: none;
+    }
+  }
+
+
+  .recommendation--tag {
+    @include uppercase();
+    font-size: .725rem;
+  }
+
+  .recommendation--title {
+    font-family: Mercury Display A,Mercury Display B;
+    font-size: 1.3rem;
+    line-height: 1.05;
+    margin: 0 0 .4rem 0;
+  }
+
+  .recommendation--subtitle {
+    @include small-sans();
+    line-height: 1.3;
+  }
+
+  &:hover {
+    //background: $secondary;
+
+  }
+
+  &:hover + .replaceLinkForm svg {
+    opacity: 1;
+  }
+
+
+
+  .spinner {
+    display: none;
+  }
+
+  .action-strip {
+    opacity: 0;
+    position: absolute;
+    right: 0rem;
+    top: 0;
+    height: 100%;
+    width: 1rem;
+    transition: opacity 500ms ease;
+
+    > svg {
+     // opacity: 0;
+      position: absolute;
+      bottom: .5rem;
+      width: .75rem;
+      right: 0;
+      height: auto;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &:hover {
+
+    .action-strip {
+      opacity: 1;
+    }
+  }
+}
+
+.replaceLinkForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 100%;
+
+
+  > span {
+    @include uppercase();
+    font-size: .725rem;
+    margin: .25rem 0;
+    cursor: pointer;
+  }
+
+
+
+  input, button {
+    display: none;
+  }
+
+  input {
+    margin: .5rem 0;
+  }
+
+  button {
+    height: 1.5rem;
+  }
+
+  &.open {
+
+    padding: 3rem 0;
+
+    > svg {
+      display: none;
+    }
+
+    input, button {
+      display: block;
+    }
+  }
+
+  &:hover {
+    svg {
+      opacity: 1;
+    }
+  }
+}

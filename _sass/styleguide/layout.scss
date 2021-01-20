@@ -1,0 +1,45 @@
+.container {
+  position: relative;
+  width: 1000px;
+  margin: 0 auto;
+}
+
+
+@media (max-width: 1200px) {
+  .container {
+    width: 768px;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    width: 100%;
+  }
+}
+
+.flex-row {
+
+  @media (min-width: $breakpoint-sm) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+}
+
+.flex-column {
+
+  @media (min-width: $breakpoint-sm) {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+}
+
+.flex-half {
+
+  width : 50%;
+}

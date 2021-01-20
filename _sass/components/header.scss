@@ -1,0 +1,242 @@
+header {
+
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 80px;
+  display: block;
+  background: $creme;
+  transition: all 500ms ease;
+
+  @media (min-width: $breakpoint-sm) {
+    height: 120px;
+  }
+
+  #header-container {
+
+    position: relative;
+    //height: 160px;
+    z-index: 1;
+    //top: 0;
+    //left: 0;
+    //width: 100vw;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: visible;
+
+    @media (min-width: $breakpoint-md) {
+      justify-content: space-between;
+    }
+  }
+
+  h1 {
+      @include heavy();
+      font-size: 2.8rem;
+      color: $dark-grey;
+
+      @media (min-width: $breakpoint-sm) {
+        font-size: 4rem;
+      }
+  }
+
+  h2 {
+    display: none;
+    font-weight: 400;
+    font-family: "Gotham SSm A", "Gotham SSm B";
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    font-size: .91rem;
+    line-height: 1;
+    color: $dark-grey;
+
+    @media (min-width: $breakpoint-sm) {
+      display : block;
+    }
+
+    &.shrunk {
+      display: none;
+    }
+  }
+
+  svg.icon-hamburger {
+
+    display: block;
+    position: absolute;
+    top: 0rem;
+    right: -1rem;
+    width: 5rem;
+    height: auto;
+
+    @media(min-width: $breakpoint-md) {
+      display: none;
+    }
+  }
+
+  nav.open {
+
+    @media(max-width: $breakpoint-md) {
+      position: fixed;
+      background: $dark-grey;
+      height: 100vh;
+      width: 100vw;
+      top: 0;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      ul {
+        display : block;
+      }
+
+      li a {
+        color: $creme;
+        font-size: 2rem;
+        line-height: 2;
+        text-align: center;
+        border: none;
+      }
+
+      #metamask {
+        display: none;
+      }
+    }
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: row;
+    align-items: center;
+
+    @media(min-width: $breakpoint-md) {
+      display: flex;
+    }
+
+    li {
+      padding: 0 2rem;
+
+      a {
+        display: block;
+        line-height: 1.25;
+      }
+
+      &#metamask {
+
+        display: flex;
+        margin-top: .6rem;
+        position: relative;
+
+        svg {
+          height: 3rem;
+          width: auto;
+          -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+        }
+
+        > div.tooltip {
+          visibility: hidden;
+          opacity: 0;
+          position: absolute;
+          bottom: -10.5rem;
+          width: 12rem;
+          left: -3.575rem;
+          height: 8em;
+          background: #333;
+          z-index: 999;
+          padding: 1rem;
+          color: white;
+            font-family: Gotham SSm A,Gotham SSm B;
+          font-weight: 300;
+          line-height: 1.33;
+          text-transform: uppercase;
+          letter-spacing: 1.5px;
+          font-size: .725rem;
+          transition: visibility 0s, opacity 125ms, bottom 125ms ease-out;
+
+          > .tip {
+            position: absolute;
+            top: -.5rem;
+            left: calc(50% - .4rem);
+            width: 1rem;
+            height: 1rem;
+            transform: rotate(-45deg);
+            background: #333;
+
+          }
+
+          #welcome_message span {
+            //font-size: .45rem;
+          }
+
+          #personal_info {
+
+            flex-direction: column;
+            justify-content: center;
+            padding-top: .5rem;
+
+            > div > span {
+              display: inline-block;
+              //margin: 0 .125rem;
+            }
+          }
+          &.visible {
+            visibility: visible;
+            bottom: -8.5rem;
+            opacity: 1;
+          }
+        }
+
+        &.visible {
+          display: block;
+        }
+
+        &:hover {
+
+          > div.tooltip:not(.visible) {
+            visibility: visible;
+            bottom: -8.5rem;
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  a#woordmerk {
+    border: none;
+  }
+}
+
+header.expanded {
+
+  z-index: 1;
+  height: calc(100vh + 120px);
+
+  #header-container {
+    height: 100vh;
+  }
+}
+
+#blog header, header.shrunk {
+
+    height: 80px;
+    background: $secondary;
+
+
+    h1 {
+      font-size: 2.8rem;
+    }
+
+    h2.expanded {
+      display: none;
+    }
+    h2.shrunk {
+      display: block;
+    }
+}

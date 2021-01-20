@@ -1,0 +1,9 @@
+.taxonomy-tab {
+
+  display: inline-block;
+  background: $secondary;
+  padding: 0 .75rem;
+  @include uppercase();
+  font-size: .85rem;
+
+}

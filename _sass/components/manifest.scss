@@ -1,0 +1,56 @@
+#manifest.container-small {
+  margin-top: 4rem;
+
+  @media(max-width: $breakpoint-md) {
+    margin-top: 2rem;
+    width : calc(100% - 8rem);
+  }
+
+}
+
+.manifest-point {
+
+  margin-bottom: 2.5rem;
+  margin-left: -4rem;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-end;
+  position: relative;
+
+  svg {
+
+    width: auto;
+    height: 2rem;
+    margin-top: -1px;
+
+  }
+
+  > span {
+
+    display: inline-block;
+    @include heavy();
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: .9;
+    margin-right: .5rem;
+  }
+
+  .manifest-point-body {
+    width: calc(100% - 4rem);
+
+    .manifest-point-heading {
+      @include condensed-header();
+      line-height: .9;
+    }
+
+    .manifest-point-text {
+
+      padding: 0;
+      line-height: 1.35;
+      width: 100%;
+
+    }
+  }
+}
+

@@ -1,0 +1,168 @@
+.post-header {
+
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  @media (min-width: $breakpoint-sm) {
+
+    margin-bottom: 3rem;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .post-intro--stats {
+
+    width: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-end;
+    margin-right: 10px;
+
+    @media (min-width: $breakpoint-sm) {
+      flex-direction: column;
+    }
+
+    .event-date {
+
+      width : auto;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      padding: 0;
+      margin-top: .5rem;
+      background: $dark-grey;
+
+      border: none;
+
+      span {
+
+        color: white;
+        padding: .125rem .25rem;
+        font-size: 1.125rem;
+        line-height: 1;
+
+
+        &:first-child {
+          font-size: 3rem;
+          line-height: 1;
+        }
+
+        &:last-child {
+          transform : translateY(-4px);
+          position: relative;
+          z-index: 2;
+        }
+      }
+
+    }
+
+
+    > div {
+
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      margin-bottom: .5rem;
+      border: 1px solid #000;
+      padding: 0 .5rem;
+      @include uppercase();
+      font-size: .85rem;
+      line-height: 2.25;
+      margin-right: .5rem;
+
+      @media (min-width: $breakpoint-sm) {
+        margin-right: 0;
+      }
+
+      svg {
+
+        width: 100%;
+        height: auto;
+        fill: black;
+        width: 1rem;
+        height: auto;
+        margin: 0 0 0 .3rem;
+      }
+
+      &.post-intro--stats--votes--down {
+
+        svg {
+          transform: scaleY(-1);
+        }
+      }
+
+      &.post-intro--stats--commentcount {
+
+        svg {
+          width: 1.75rem;
+        }
+      }
+    }
+  }
+
+
+ .post-intro--title {
+
+   @media (min-width: $breakpoint-sm) {
+     width: calc(100% - 60px);
+   }
+
+
+   .taxonomy-tab {
+     margin-left: calc(1rem + 10px);
+     display: inline-block;
+     margin-bottom: .25rem;
+   }
+
+   h2 {
+     @include heavy();
+     font-family: "Gotham Cond SSm A", "Gotham Cond SSm B";
+     font-style: normal;
+     font-weight: 800;
+     font-size: 4rem;
+     line-height: .9;
+     color : $dark-grey;
+     border-left: 10px solid $dark-grey;
+     padding-left: 1rem;
+     margin: .5rem 0;
+
+
+     //color: white;
+     text-transform: uppercase;
+     //background: #333;
+     //padding: .5rem 1rem;
+     //display: inline-block;
+     //text-align: center;
+
+     @media (min-width: $breakpoint-sm){
+       font-size: 6rem;
+       max-width: calc(100% - 240px - 2rem);
+       margin: 0;
+     }
+   }
+   .date {
+     display: block;
+     @include uppercase();
+     margin-left: calc(1rem + 10px);
+   }
+
+   .source {
+     @include uppercase();
+     cursor: pointer;
+     margin-left: calc(1rem + 10px);
+     background: #d5d3d3;
+     padding: 0 .75rem;
+     font-size: 1rem;
+     font-size: .85rem;
+     display: inline-block;
+   }
+ }
+
+
+
+}
+

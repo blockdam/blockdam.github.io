@@ -1,0 +1,139 @@
+@mixin squareImage() {
+
+  width: 100%;
+  @media (min-width : $breakpoint-md) {
+    width: calc(2 * ((100vw - 12rem - 1rem) / 5));
+  }
+  @media (min-width : $breakpoint-lg) {
+    width: calc(2 * ((100vw - 24rem - 1rem) / 5));
+  }
+}
+
+@mixin cameraImage() {
+  width: 100%;
+  @media (min-width : $breakpoint-md) {
+    width: calc(3 * ((100vw - 12rem - 1rem) / 5));
+  }
+  @media (min-width : $breakpoint-lg) {
+    width: calc(3 * ((100vw - 24rem - 1rem) / 5));
+  }
+
+}
+
+@mixin cameraEqualSizes() {
+  width: 100%;
+  @media (min-width : $breakpoint-md) {
+    width: calc(3 * ((100vw - 18rem - 1rem) / 5));
+  }
+  @media (min-width : $breakpoint-lg) {
+    width: calc(3 * ((100vw - 24rem - 1rem) / 5));
+  }
+
+}
+
+@mixin singleImage() {
+  width: 100%;
+  @media (min-width : $breakpoint-md) {
+    width: calc(100vw - 16rem);
+  }
+  @media (min-width : $breakpoint-lg) {
+    width: calc(100vw - 32rem);
+  }
+}
+
+.section.images {
+  display: flex;
+  flex-direction: row;
+  margin: 3rem auto;
+  flex-wrap: wrap;
+
+  > div {
+
+    display: flex;
+    flex-direction: column;
+
+    > .img-container img {
+      filter: grayscale(1);
+
+      &:hover {
+        filter: grayscale(0);
+      }
+    }
+
+    > .image-item-overlay {
+
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      opacity: 0;
+    }
+
+
+  }
+
+  &.duo.right {
+
+    justify-content: flex-end;
+
+    > div:nth-of-type(1) {
+      @include squareImage();
+
+      margin-bottom: 6rem;
+      @media (min-width : $breakpoint-md) {
+        margin: 0 2rem 0 0;
+      }
+    }
+
+    > div:nth-of-type(2) {
+      @include cameraImage();
+    }
+  }
+
+  &.duo.left {
+
+    justify-content: flex-start;
+
+    > div:nth-of-type(1) {
+      @include cameraImage();
+      margin-bottom: 6rem;
+      @media (min-width : $breakpoint-md) {
+        margin: 0;
+      }
+    }
+
+    > div:nth-of-type(2) {
+      @include squareImage();
+      @media (min-width : $breakpoint-md) {
+        margin-left: 2rem;
+      }
+    }
+  }
+
+  &.duo.center {
+
+    justify-content: center;
+
+    > div:nth-of-type(1) {
+      @include cameraEqualSizes();
+      margin-bottom: 6rem;
+      @media (min-width : $breakpoint-md) {
+        margin: 0;
+      }
+    }
+
+    > div:nth-of-type(2) {
+      @include cameraEqualSizes();
+      @media (min-width : $breakpoint-md) {
+        margin-left: 2rem;
+      }
+    }
+  }
+
+  &.single.center {
+
+    justify-content: center;
+  > div {
+      @include singleImage();
+    }
+  }
+}
